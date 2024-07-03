@@ -1,0 +1,278 @@
+/* Start Variables */
+:root {
+  --main-color: #c841ff;
+  --secondary-color: #933afd;
+  --text-color: #4b385b;
+  --main-transition: 0.3s;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #e1dfe4;
+}
+ul {
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* ===== */
+main .container {
+  max-height: 100vh;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  main .container {
+    overflow: auto;
+  }
+}
+.backgrund {
+  overflow: hidden;
+  position: relative;
+  background-image: linear-gradient(
+    to bottom,
+    var(--main-color),
+    var(--secondary-color)
+  );
+  width: 400px;
+  height: 800px;
+  border-radius: 0 0 200px 200px;
+  left: -80px;
+}
+@media (max-width: 767px) {
+  .backgrund {
+    height: 400px;
+    left: -200px;
+  }
+}
+.content {
+  position: relative;
+  bottom: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .content {
+    flex-direction: column;
+  }
+}
+.phone {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 245px;
+  border: 10px solid white;
+  border-radius: 35px;
+  overflow: hidden;
+  width: 300px;
+  background-color: #e1dfe4;
+  box-shadow: 0 0 10px #777;
+}
+@media (max-width: 767px) {
+  .phone {
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.phone .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(
+    to left,
+    var(--main-color),
+    var(--secondary-color)
+  );
+  padding: 40px 10px 10px 10px;
+}
+.phone .top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 28px;
+  border-radius: 0 0 16px 16px;
+  background-color: white;
+}
+.phone .top .car {
+  display: flex;
+  align-items: center;
+}
+.phone .top .car a {
+  margin-right: 5px;
+  color: white;
+}
+.phone .top .logo img {
+  width: 24px;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: 5px;
+}
+.phone .top .info {
+  color: white;
+}
+.phone .top .info h4 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: -5px;
+}
+.phone .top .info span {
+  font-size: 10px;
+}
+.phone .top .minue a i {
+  color: white;
+  font-size: 13px;
+}
+/* ==== */
+.phone .chat {
+  padding: 15px 10px 15px;
+}
+.phone .chat p {
+  font-size: 10px;
+  max-width: 160px;
+  background-color: #d7d2db;
+  color: var(--main-color);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.phone .chat p:nth-child(n + 3):nth-child(-n + 5) {
+  margin-left: auto;
+  background-color: #f3f3f3;
+  color: black;
+}
+.phone .chat .image {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.phone .chat .image img {
+  width: 48px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+.phone .chat .voice {
+  background-image: linear-gradient(
+    to right,
+    var(--main-color),
+    var(--secondary-color)
+  );
+  margin-bottom: 10px;
+  max-width: 200px;
+  border-radius: 15px 15px 15px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 12px 15px 12px 10px;
+}
+.phone .chat .voice .left a {
+  color: white;
+  font-weight: normal;
+  font-size: 13px;
+  opacity: 30%;
+  margin-right: 8px;
+}
+.phone .chat .voice .left span {
+  font-size: 12px;
+}
+.phone .chat .voice .right span {
+  font-weight: bold;
+}
+/* === */
+.phone .message input {
+  width: calc(100% - 20px);
+  margin: auto;
+  margin-bottom: 15px;
+  display: block;
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+}
+.phone .message input:focus {
+  outline: none;
+}
+.message input::placeholder {
+  opacity: 40%;
+  font-size: 12px;
+  padding-left: 15px;
+}
+.message a {
+  position: absolute;
+  right: 15px;
+  bottom: 18px;
+  font-size: 32px;
+}
+/* ==== */
+/* .content .info {
+  margin: auto;
+} */
+.content .info h2 {
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+.content .info p {
+  max-width: 350px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #999;
+}
+@media (max-width: 767px) {
+  .content .info {
+    text-align: center;
+    position: relative;
+    top: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .content .info h2 {
+    font-size: 40px;
+    font-weight: 500;
+  }
+}
+@media (max-width: 767px) {
+  .content .info p {
+    margin: auto;
+    max-width: 260px;
+    font-size: 14px;
+  
+  }
+}
